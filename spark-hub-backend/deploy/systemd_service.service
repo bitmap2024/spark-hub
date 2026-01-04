@@ -1,0 +1,21 @@
+[Unit]
+Description=Spark Hub Backend Service
+After=network.target
+
+[Service]
+User=www-data
+Group=www-data
+WorkingDirectory=/path/to/code/spark-hub-backend
+ExecStart=/path/to/venv/bin/gunicorn -c deploy/gunicorn_conf.py app.main:app
+Restart=on-failure
+RestartSec=5s
+StandardOutput=append:/path/to/code/spark-hub-backend/logs/systemd_stdout.log
+StandardError=append:/path/to/code/spark-hub-backend/logs/systemd_stderr.log
+
+# 环境变量
+Environment="ENVIRONMENT=production"
+Environment="HOST=0.0.0.0"
+Environment="PORT=8000"
+
+[Install]
+WantedBy=multi-user.target 

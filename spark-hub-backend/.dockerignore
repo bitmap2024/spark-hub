@@ -1,0 +1,41 @@
+# Git
+.git
+.gitignore
+
+# 虚拟环境
+venv/
+.venv/
+env/
+*.pyc
+__pycache__/
+
+# 日志和临时文件
+*.log
+logs/
+tmp/
+temp/
+
+# 测试文件
+tests/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# IDE配置
+.idea/
+.vscode/
+
+# 其他不需要的文件
+*.md
+!README.md
+.env
+.env.*
+*.db
+spark_hub.db
+*.sqlite3
+
+# 部署相关但不需要打包到镜像中的文件
+deploy/supervisor_conf.ini
+deploy/systemd_service.service
+deploy/nginx_conf.conf 

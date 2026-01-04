@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: spark-hub-config
+data:
+  db_host: "postgres-service"
+  db_name: "spark-hub"
+  log_level: "info"
+  workers: "2"
+  workers_per_core: "2" 

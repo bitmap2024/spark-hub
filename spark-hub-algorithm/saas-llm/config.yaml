@@ -1,0 +1,940 @@
+# LLM模型配置
+models:
+  # ===========================================
+  # 阿里云通义千问 - 商业版模型
+  # ===========================================
+  
+  # Qwen-Max 系列 - 最佳推理性能
+  qwen-max:
+    provider: qwen
+    model: qwen-max
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 8192
+    temperature: 0.7
+    top_p: 1.0
+    frequency_penalty: 0.0
+    presence_penalty: 0.0
+    timeout: 60
+    priority: 1
+    enable_search: false
+    enable_thinking: false
+
+  qwen-max-latest:
+    provider: qwen
+    model: qwen-max-latest
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 8192
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 60
+    priority: 1
+    enable_search: false
+    enable_thinking: false
+
+  qwen-max-2025-01-25:
+    provider: qwen
+    model: qwen-max-2025-01-25
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 8192
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 60
+    priority: 1
+    enable_search: false
+    enable_thinking: false
+
+  # Qwen-Plus 系列 - 平衡性能、速度和成本
+  qwen-plus:
+    provider: qwen
+    model: qwen-plus
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 8192
+    temperature: 0.7
+    top_p: 1.0
+    frequency_penalty: 0.0
+    presence_penalty: 0.0
+    timeout: 60
+    priority: 2
+    enable_search: true
+    enable_thinking: true
+
+  qwen-plus-latest:
+    provider: qwen
+    model: qwen-plus-latest
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 16384
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 60
+    priority: 2
+    enable_search: true
+    enable_thinking: true
+
+  qwen-plus-2025-04-28:
+    provider: qwen
+    model: qwen-plus-2025-04-28
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 16384
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 60
+    priority: 2
+    enable_search: true
+    enable_thinking: true
+
+  qwen-plus-2025-01-25:
+    provider: qwen
+    model: qwen-plus-2025-01-25
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 8192
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 60
+    priority: 2
+    enable_search: false
+    enable_thinking: false
+
+  # Qwen-Turbo 系列 - 快速且低成本
+  qwen-turbo:
+    provider: qwen
+    model: qwen-turbo
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 8192
+    temperature: 0.7
+    top_p: 1.0
+    frequency_penalty: 0.0
+    presence_penalty: 0.0
+    timeout: 30
+    priority: 3
+    enable_search: false
+    enable_thinking: false
+
+  qwen-turbo-latest:
+    provider: qwen
+    model: qwen-turbo-latest
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 16384
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 30
+    priority: 3
+    enable_search: false
+    enable_thinking: true
+
+  qwen-turbo-2025-04-28:
+    provider: qwen
+    model: qwen-turbo-2025-04-28
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 16384
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 30
+    priority: 3
+    enable_search: false
+    enable_thinking: true
+
+  qwen-turbo-2024-11-01:
+    provider: qwen
+    model: qwen-turbo-2024-11-01
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 8192
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 30
+    priority: 3
+    enable_search: false
+    enable_thinking: false
+
+  # QwQ 推理模型
+  qwq-plus:
+    provider: qwen
+    model: qwq-plus
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 8192
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 60
+    priority: 1
+    enable_search: false
+    enable_thinking: true
+
+  # QVQ 视觉推理模型
+  qvq-max:
+    provider: qwen
+    model: qvq-max
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 8192
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 60
+    priority: 1
+    enable_search: false
+    enable_thinking: true
+
+  qvq-max-latest:
+    provider: qwen
+    model: qvq-max-latest
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 8192
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 60
+    priority: 1
+    enable_search: false
+    enable_thinking: true
+
+  # Qwen-VL 多模态模型
+  qwen-vl-max:
+    provider: qwen
+    model: qwen-vl-max
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 8192
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 60
+    priority: 1
+    enable_search: false
+    enable_thinking: false
+
+  qwen-vl-plus:
+    provider: qwen
+    model: qwen-vl-plus
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 8192
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 60
+    priority: 2
+    enable_search: false
+    enable_thinking: false
+
+  # ===========================================
+  # 阿里云通义千问 - 开源版模型
+  # ===========================================
+
+  # Qwen3 系列
+  qwen3-235b-a22b:
+    provider: qwen
+    model: qwen3-235b-a22b
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 16384
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 60
+    priority: 1
+    enable_search: false
+    enable_thinking: true
+
+  qwen3-32b:
+    provider: qwen
+    model: qwen3-32b
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 16384
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 60
+    priority: 2
+    enable_search: false
+    enable_thinking: true
+
+  qwen3-30b-a3b:
+    provider: qwen
+    model: qwen3-30b-a3b
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 16384
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 60
+    priority: 2
+    enable_search: false
+    enable_thinking: true
+
+  qwen3-14b:
+    provider: qwen
+    model: qwen3-14b
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 8192
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 30
+    priority: 3
+    enable_search: false
+    enable_thinking: true
+
+  qwen3-8b:
+    provider: qwen
+    model: qwen3-8b
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 16384
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 30
+    priority: 4
+    enable_search: false
+    enable_thinking: true
+
+  qwen3-4b:
+    provider: qwen
+    model: qwen3-4b
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 16384
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 30
+    priority: 5
+    enable_search: false
+    enable_thinking: true
+
+  qwen3-1.7b:
+    provider: qwen
+    model: qwen3-1.7b
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 16384
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 30
+    priority: 6
+    enable_search: false
+    enable_thinking: true
+
+  qwen3-0.6b:
+    provider: qwen
+    model: qwen3-0.6b
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 16384
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 30
+    priority: 7
+    enable_search: false
+    enable_thinking: true
+
+  # Qwen2.5 系列
+  qwen2.5-72b-instruct:
+    provider: qwen
+    model: qwen2.5-72b-instruct
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 8192
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 60
+    priority: 2
+    enable_search: false
+    enable_thinking: false
+
+  qwen2.5-32b-instruct:
+    provider: qwen
+    model: qwen2.5-32b-instruct
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 8192
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 30
+    priority: 3
+    enable_search: false
+    enable_thinking: false
+
+  qwen2.5-14b-instruct:
+    provider: qwen
+    model: qwen2.5-14b-instruct
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 8192
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 30
+    priority: 4
+    enable_search: false
+    enable_thinking: false
+
+  qwen2.5-7b-instruct:
+    provider: qwen
+    model: qwen2.5-7b-instruct
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 8192
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 30
+    priority: 5
+    enable_search: false
+    enable_thinking: false
+
+  qwen2.5-14b-instruct-1m:
+    provider: qwen
+    model: qwen2.5-14b-instruct-1m
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 8192
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 60
+    priority: 3
+    enable_search: false
+    enable_thinking: false
+
+  qwen2.5-7b-instruct-1m:
+    provider: qwen
+    model: qwen2.5-7b-instruct-1m
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 8192
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 60
+    priority: 4
+    enable_search: false
+    enable_thinking: false
+
+  # Qwen2 系列
+  qwen2-72b-instruct:
+    provider: qwen
+    model: qwen2-72b-instruct
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 6144
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 60
+    priority: 3
+    enable_search: false
+    enable_thinking: false
+
+  qwen2-57b-a14b-instruct:
+    provider: qwen
+    model: qwen2-57b-a14b-instruct
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 6144
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 60
+    priority: 4
+    enable_search: false
+    enable_thinking: false
+
+  qwen2-7b-instruct:
+    provider: qwen
+    model: qwen2-7b-instruct
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 6144
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 30
+    priority: 5
+    enable_search: false
+    enable_thinking: false
+
+  # Qwen1.5 系列
+  qwen1.5-110b-chat:
+    provider: qwen
+    model: qwen1.5-110b-chat
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 2000
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 60
+    priority: 3
+    enable_search: false
+    enable_thinking: false
+
+  qwen1.5-72b-chat:
+    provider: qwen
+    model: qwen1.5-72b-chat
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 2000
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 60
+    priority: 4
+    enable_search: false
+    enable_thinking: false
+
+  qwen1.5-32b-chat:
+    provider: qwen
+    model: qwen1.5-32b-chat
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 2000
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 30
+    priority: 5
+    enable_search: false
+    enable_thinking: false
+
+  qwen1.5-14b-chat:
+    provider: qwen
+    model: qwen1.5-14b-chat
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 2000
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 30
+    priority: 6
+    enable_search: false
+    enable_thinking: false
+
+  qwen1.5-7b-chat:
+    provider: qwen
+    model: qwen1.5-7b-chat
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 2000
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 30
+    priority: 7
+    enable_search: false
+    enable_thinking: false
+
+  # Qwen2.5-VL 多模态模型
+  qwen2.5-vl-72b-instruct:
+    provider: qwen
+    model: qwen2.5-vl-72b-instruct
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 8192
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 60
+    priority: 2
+    enable_search: false
+    enable_thinking: false
+
+  qwen2.5-vl-7b-instruct:
+    provider: qwen
+    model: qwen2.5-vl-7b-instruct
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 8192
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 30
+    priority: 4
+    enable_search: false
+    enable_thinking: false
+
+  qwen2.5-vl-3b-instruct:
+    provider: qwen
+    model: qwen2.5-vl-3b-instruct
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 8192
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 30
+    priority: 5
+    enable_search: false
+    enable_thinking: false
+
+  # QwQ 开源推理模型
+  qwq-32b:
+    provider: qwen
+    model: qwq-32b
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 8192
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 60
+    priority: 2
+    enable_search: false
+    enable_thinking: true
+
+  # DeepSeek-R1 系列
+  deepseek-r1:
+    provider: qwen
+    model: deepseek-r1
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 16384
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 60
+    priority: 1
+    enable_search: false
+    enable_thinking: true
+
+  deepseek-r1-0528:
+    provider: qwen
+    model: deepseek-r1-0528
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 16384
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 60
+    priority: 1
+    enable_search: false
+    enable_thinking: true
+
+  deepseek-r1-distill-qwen-1.5b:
+    provider: qwen
+    model: deepseek-r1-distill-qwen-1.5b
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 16384
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 30
+    priority: 6
+    enable_search: false
+    enable_thinking: true
+
+  deepseek-r1-distill-qwen-7b:
+    provider: qwen
+    model: deepseek-r1-distill-qwen-7b
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 16384
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 30
+    priority: 5
+    enable_search: false
+    enable_thinking: true
+
+  deepseek-r1-distill-qwen-14b:
+    provider: qwen
+    model: deepseek-r1-distill-qwen-14b
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 16384
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 30
+    priority: 4
+    enable_search: false
+    enable_thinking: true
+
+  deepseek-r1-distill-qwen-32b:
+    provider: qwen
+    model: deepseek-r1-distill-qwen-32b
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 16384
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 30
+    priority: 3
+    enable_search: false
+    enable_thinking: true
+
+  deepseek-r1-distill-llama-8b:
+    provider: qwen
+    model: deepseek-r1-distill-llama-8b
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 16384
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 30
+    priority: 5
+    enable_search: false
+    enable_thinking: true
+
+  deepseek-r1-distill-llama-70b:
+    provider: qwen
+    model: deepseek-r1-distill-llama-70b
+    api_key: ${DASHSCOPE_API_KEY}
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 16384
+    temperature: 0.7
+    top_p: 1.0
+    timeout: 60
+    priority: 2
+    enable_search: false
+    enable_thinking: true
+
+  # ===========================================
+  # 硅基流动 - Qwen 系列模型
+  # ===========================================
+
+  # Qwen2.5 系列
+  sf-qwen2.5-72b-instruct:
+    provider: siliconflow
+    model: Qwen/Qwen2.5-72B-Instruct
+    api_key: ${SILICONFLOW_API_KEY}
+    base_url: https://api.siliconflow.cn/v1
+    max_tokens: 8192
+    temperature: 0.7
+    top_p: 1.0
+    top_k: 50
+    timeout: 60
+    priority: 2
+    
+  sf-qwen2.5-32b-instruct:
+    provider: siliconflow
+    model: Qwen/Qwen2.5-32B-Instruct
+    api_key: ${SILICONFLOW_API_KEY}
+    base_url: https://api.siliconflow.cn/v1
+    max_tokens: 8192
+    temperature: 0.7
+    top_p: 1.0
+    top_k: 50
+    timeout: 60
+    priority: 3
+
+  sf-qwen2.5-14b-instruct:
+    provider: siliconflow
+    model: Qwen/Qwen2.5-14B-Instruct
+    api_key: ${SILICONFLOW_API_KEY}
+    base_url: https://api.siliconflow.cn/v1
+    max_tokens: 8192
+    temperature: 0.7
+    top_p: 1.0
+    top_k: 50
+    timeout: 30
+    priority: 4
+
+  sf-qwen2.5-7b-instruct:
+    provider: siliconflow
+    model: Qwen/Qwen2.5-7B-Instruct
+    api_key: ${SILICONFLOW_API_KEY}
+    base_url: https://api.siliconflow.cn/v1
+    max_tokens: 8192
+    temperature: 0.7
+    top_p: 1.0
+    top_k: 50
+    timeout: 30
+    priority: 5
+
+  sf-qwen2.5-3b-instruct:
+    provider: siliconflow
+    model: Qwen/Qwen2.5-3B-Instruct
+    api_key: ${SILICONFLOW_API_KEY}
+    base_url: https://api.siliconflow.cn/v1
+    max_tokens: 8192
+    temperature: 0.7
+    top_p: 1.0
+    top_k: 50
+    timeout: 30
+    priority: 6
+
+  sf-qwen2.5-1.5b-instruct:
+    provider: siliconflow
+    model: Qwen/Qwen2.5-1.5B-Instruct
+    api_key: ${SILICONFLOW_API_KEY}
+    base_url: https://api.siliconflow.cn/v1
+    max_tokens: 8192
+    temperature: 0.7
+    top_p: 1.0
+    top_k: 50
+    timeout: 30
+    priority: 7
+
+  sf-qwen2.5-0.5b-instruct:
+    provider: siliconflow
+    model: Qwen/Qwen2.5-0.5B-Instruct
+    api_key: ${SILICONFLOW_API_KEY}
+    base_url: https://api.siliconflow.cn/v1
+    max_tokens: 8192
+    temperature: 0.7
+    top_p: 1.0
+    top_k: 50
+    timeout: 30
+    priority: 8
+
+  # Qwen3 系列
+  sf-qwen3-235b-a22b:
+    provider: siliconflow
+    model: qwen3-235b-a22b
+    api_key: ${SILICONFLOW_API_KEY}
+    base_url: https://api.siliconflow.cn/v1
+    max_tokens: 16384
+    temperature: 0.7
+    top_p: 1.0
+    top_k: 50
+    timeout: 60
+    priority: 1
+
+  sf-qwen3-32b:
+    provider: siliconflow
+    model: qwen3-32b
+    api_key: ${SILICONFLOW_API_KEY}
+    base_url: https://api.siliconflow.cn/v1
+    max_tokens: 16384
+    temperature: 0.7
+    top_p: 1.0
+    top_k: 50
+    timeout: 60
+    priority: 2
+
+  # QwQ 推理模型
+  sf-qwq-32b-preview:
+    provider: siliconflow
+    model: QwQ-32B-Preview
+    api_key: ${SILICONFLOW_API_KEY}
+    base_url: https://api.siliconflow.cn/v1
+    max_tokens: 8192
+    temperature: 0.7
+    top_p: 1.0
+    top_k: 50
+    timeout: 60
+    priority: 1
+
+  # DeepSeek-R1 系列
+  sf-deepseek-r1:
+    provider: siliconflow
+    model: deepseek-ai/DeepSeek-R1
+    api_key: ${SILICONFLOW_API_KEY}
+    base_url: https://api.siliconflow.cn/v1
+    max_tokens: 16384
+    temperature: 0.7
+    top_p: 1.0
+    top_k: 50
+    timeout: 60
+    priority: 1
+
+  sf-deepseek-r1-distill-qwen-1.5b:
+    provider: siliconflow
+    model: deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B
+    api_key: ${SILICONFLOW_API_KEY}
+    base_url: https://api.siliconflow.cn/v1
+    max_tokens: 16384
+    temperature: 0.7
+    top_p: 1.0
+    top_k: 50
+    timeout: 30
+    priority: 6
+
+  sf-deepseek-r1-distill-qwen-7b:
+    provider: siliconflow
+    model: deepseek-ai/DeepSeek-R1-Distill-Qwen-7B
+    api_key: ${SILICONFLOW_API_KEY}
+    base_url: https://api.siliconflow.cn/v1
+    max_tokens: 16384
+    temperature: 0.7
+    top_p: 1.0
+    top_k: 50
+    timeout: 30
+    priority: 5
+
+  sf-deepseek-r1-distill-qwen-14b:
+    provider: siliconflow
+    model: deepseek-ai/DeepSeek-R1-Distill-Qwen-14B
+    api_key: ${SILICONFLOW_API_KEY}
+    base_url: https://api.siliconflow.cn/v1
+    max_tokens: 16384
+    temperature: 0.7
+    top_p: 1.0
+    top_k: 50
+    timeout: 30
+    priority: 4
+
+  sf-deepseek-r1-distill-qwen-32b:
+    provider: siliconflow
+    model: deepseek-ai/DeepSeek-R1-Distill-Qwen-32B
+    api_key: ${SILICONFLOW_API_KEY}
+    base_url: https://api.siliconflow.cn/v1
+    max_tokens: 16384
+    temperature: 0.7
+    top_p: 1.0
+    top_k: 50
+    timeout: 30
+    priority: 3
+
+  sf-deepseek-r1-distill-llama-8b:
+    provider: siliconflow
+    model: deepseek-ai/DeepSeek-R1-Distill-Llama-8B
+    api_key: ${SILICONFLOW_API_KEY}
+    base_url: https://api.siliconflow.cn/v1
+    max_tokens: 16384
+    temperature: 0.7
+    top_p: 1.0
+    top_k: 50
+    timeout: 30
+    priority: 5
+
+  sf-deepseek-r1-distill-llama-70b:
+    provider: siliconflow
+    model: deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+    api_key: ${SILICONFLOW_API_KEY}
+    base_url: https://api.siliconflow.cn/v1
+    max_tokens: 16384
+    temperature: 0.7
+    top_p: 1.0
+    top_k: 50
+    timeout: 60
+    priority: 2
+
+  # ===========================================
+  # OpenAI 模型（保留原有配置作为对比）
+  # ===========================================
+  
+  gpt-4:
+    provider: openai
+    model: gpt-4
+    api_key: ${OPENAI_API_KEY}
+    base_url: https://api.openai.com/v1
+    max_tokens: 4096
+    temperature: 0.7
+    top_p: 1.0
+    frequency_penalty: 0.0
+    presence_penalty: 0.0
+    timeout: 60
+    priority: 1
+
+  gpt-3.5-turbo:
+    provider: openai
+    model: gpt-3.5-turbo
+    api_key: ${OPENAI_API_KEY}
+    base_url: https://api.openai.com/v1
+    max_tokens: 4096
+    temperature: 0.7
+    top_p: 1.0
+    frequency_penalty: 0.0
+    presence_penalty: 0.0
+    timeout: 30
+    priority: 2
+
+# 代理池配置
+proxy_pool:
+  # 负载均衡策略: round_robin, random, priority
+  strategy: priority
+  # 是否启用故障转移
+  failover: true
+  # 故障转移重试次数
+  max_retries: 3
+  # 故障转移冷却时间（秒）
+  cooldown_period: 60
+  # 健康检查间隔（秒）
+  health_check_interval: 300
+
+# 日志配置
+logging:
+  level: INFO
+  file: llm_system.log
+  max_size: 10485760  # 10MB
+  backup_count: 5 

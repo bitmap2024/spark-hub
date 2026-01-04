@@ -1,0 +1,6 @@
+docker run --name spark-hub-postgres \
+  -e POSTGRES_PASSWORD=bitmap@666 \
+  -e POSTGRES_USER=bitmap \
+  -e POSTGRES_DB=spark-hub \
+  -p 5432:5432 \
+  -d postgres
