@@ -1,0 +1,28 @@
+# 知识库推荐系统依赖
+
+# 深度学习框架
+torch>=2.0.0
+numpy>=1.24.0
+
+# 数据处理
+pandas>=2.0.0
+scipy>=1.10.0
+
+# 向量检索（可选，生产环境推荐）
+# faiss-cpu>=1.7.4  # CPU版本
+# faiss-gpu>=1.7.4  # GPU版本（需要CUDA）
+# pymilvus>=2.3.0   # Milvus客户端
+
+# API服务（可选）
+# fastapi>=0.100.0
+# uvicorn>=0.22.0
+# pydantic>=2.0.0
+
+# 日志和监控
+# loguru>=0.7.0
+# prometheus-client>=0.17.0
+
+# 测试
+# pytest>=7.4.0
+# pytest-cov>=4.1.0
+
